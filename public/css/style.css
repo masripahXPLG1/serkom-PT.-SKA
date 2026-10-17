@@ -1,0 +1,441 @@
+/* ========== Warna utama ========== */
+:root {
+    --orange: #ff7a00;
+    --orange-dark: #e56a00;
+    --orange-soft: #fff1e3;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* ========== Tombol & warna oranye ========== */
+.btn-orange {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: .5rem 1.4rem;
+}
+.btn-orange:hover {
+    background: var(--orange-dark);
+    border-color: var(--orange-dark);
+    color: #fff;
+}
+
+.btn-outline-orange {
+    background: #fff;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: .5rem 1.4rem;
+}
+.btn-outline-orange:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+.btn-outline-dark-pill {
+    background: transparent;
+    border: 2px solid #333;
+    color: #333;
+    font-weight: 600;
+    border-radius: 50rem;
+    padding: .5rem 1.4rem;
+}
+.btn-outline-dark-pill:hover {
+    background: #333;
+    color: #fff;
+}
+
+.text-orange { color: var(--orange); }
+.bg-orange-soft { background: var(--orange-soft); }
+.badge-orange { background: var(--orange); color: #fff; }
+
+/* ========== Navbar ========== */
+.navbar-nav .nav-link {
+    color: #212529;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    transition: border-color .15s ease, color .15s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--orange);
+    border-bottom-color: var(--orange);
+}
+
+.logo-nav { height: 44px; width: auto; }
+.brand-ska { color: #0b3c7a; letter-spacing: .5px; }
+
+/* ========== Hero bersih (Profil) ========== */
+.hero-clean {
+    background: #f4f4f4;
+    padding: 3rem 0;
+}
+.hero-row { min-height: 70vh; }
+
+.hero-eyebrow {
+    color: var(--orange);
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: .35em;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+}
+
+.hero-title {
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111;
+}
+
+.hero-desc { max-width: 460px; }
+
+.hero-img {
+    max-height: 460px;
+    object-fit: contain;
+}
+
+/* ========== Judul section ========== */
+.judul-section {
+    background: var(--orange-soft);
+    padding: .1rem .7rem;
+    border-radius: .5rem;
+}
+
+/* ========== Gambar kartu ========== */
+/* ========== Kartu produk & pop up ========== */
+.img-produk-wrap {
+    background: var(--orange-soft);
+    padding: 1rem;
+}
+
+.img-produk {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* ganti ke "cover" jika ingin foto memenuhi kotak */
+}
+
+.card-klik {
+    cursor: pointer;
+    transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.card-klik:hover {
+    box-shadow: 0 1rem 2rem rgba(255, 122, 0, .25) !important;
+    transform: translateY(-4px);
+}
+
+.img-modal-wrap {
+    background: var(--orange-soft);
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.img-modal {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}.img-galeri { height: 220px; object-fit: cover; }
+
+/* ========== Footer ========== */
+.btn-sosial { width: 40px; height: 40px; }
+.btn-sosial:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+}
+
+/* ========== Hero dengan foto latar blur ========== */
+.hero-bg {
+    position: relative;
+    overflow: hidden;
+    padding: 3rem 0;
+    background: #f4f4f4;
+}
+
+/* Lapisan foto yang di-blur */
+.hero-bg::before {
+    content: "";
+    position: absolute;
+    inset: -20px; /* melebihi tepi supaya pinggiran blur tidak terlihat */
+    background: url('../images/profil.jpeg') center / cover no-repeat;
+    filter: blur(6px);
+    z-index: 0;
+}
+
+/* Lapisan putih transparan supaya teks tetap terbaca */
+.hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, .92) 0%,
+        rgba(255, 255, 255, .75) 50%,
+        rgba(255, 255, 255, .35) 100%);
+    z-index: 1;
+}
+
+.hero-bg .container {
+    z-index: 2;
+}
+
+/* ========== Halaman Profil Kami ========== */
+.hero-page .hero-row {
+    min-height: 45vh;
+}
+
+.stat-box {
+    background: #fff;
+    border: 2px solid var(--orange-soft);
+    border-radius: 1rem;
+    padding: 1.2rem .5rem;
+    box-shadow: 0 8px 20px rgba(255, 122, 0, .08);
+}
+
+.icon-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== Galeri slider ========== */
+.garis-judul { display: flex; justify-content: center; align-items: center; gap: 6px; }
+.garis-judul span { height: 5px; border-radius: 5px; background: var(--orange); }
+.garis-judul span:nth-child(1) { width: 60px; }
+.garis-judul span:nth-child(2) { width: 14px; }
+.garis-judul span:nth-child(3) { width: 6px; }
+
+.galeri-slider { overflow: hidden; width: 100%; }
+.galeri-track { display: flex; transition: transform .6s ease; }
+
+.galeri-item { flex: 0 0 25%; padding: 0 .6rem; }   /* 4 foto per layar */
+.galeri-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    display: block;
+}
+
+@media (max-width: 991.98px) { .galeri-item { flex-basis: 50%; } }
+@media (max-width: 575.98px) { .galeri-item { flex-basis: 100%; } }
+
+.btn-panah {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--orange);
+    background: #fff;
+    color: var(--orange);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: .15s;
+}
+.btn-panah:hover { background: var(--orange); color: #fff; }
+
+.galeri-indikator { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 420px; }
+.galeri-indikator .bar {
+    width: 30px; height: 8px;
+    border: 0; padding: 0;
+    border-radius: 8px;
+    background: var(--orange-soft);
+    transition: .2s;
+}
+.galeri-indikator .bar.active { background: var(--orange); width: 44px; }
+
+/* ========== Artikel: daftar yang bisa dibuka ========== */
+.artikel-heading {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.artikel-list {
+    border-bottom: 1.5px solid #222;
+}
+
+.artikel-item {
+    border-top: 1.5px solid #222;
+}
+
+.artikel-head {
+    cursor: pointer;
+    padding: 1.6rem .5rem;
+    transition: background .2s ease;
+}
+
+.artikel-head:hover {
+    background: var(--orange-soft);
+}
+
+.artikel-judul {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    transition: color .2s ease;
+}
+
+.artikel-ringkas {
+    font-size: .9rem;
+    color: #444;
+}
+
+.artikel-ikon {
+    font-size: 1.3rem;
+    display: inline-block;
+    transition: transform .25s ease, color .25s ease;
+}
+
+/* Saat terbuka */
+.artikel-head:not(.collapsed) .artikel-judul,
+.artikel-head:not(.collapsed) .artikel-ikon {
+    color: var(--orange);
+}
+
+.artikel-head:not(.collapsed) .artikel-ikon {
+    transform: rotate(90deg);
+}
+
+/* Isi lengkap */
+.artikel-isi {
+    background: var(--orange-soft);
+    border-left: 4px solid var(--orange);
+    border-radius: .75rem;
+    padding: 1.25rem 1.5rem;
+    margin: 0 .5rem 1.5rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ========== Halaman login ========== */
+.auth-page {
+    background: linear-gradient(135deg, var(--orange-soft) 0%, #f4f4f4 60%);
+    min-height: 100vh;
+}
+
+.auth-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.auth-card {
+    background: #fff;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 1.5rem;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 20px 50px rgba(255, 122, 0, .18);
+}
+
+.auth-logo {
+    height: 80px;
+    width: auto;
+}
+
+.auth-card .form-control:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 .2rem rgba(255, 122, 0, .2);
+}
+
+.auth-card .input-group-text {
+    border-right: 0;
+}
+
+.auth-card .input-group .form-control {
+    border-left: 0;
+}
+
+/* ========== Footer / Kontak (pas satu layar) ========== */
+.footer-pro {
+    background: #1d2125;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 0 0;
+    scroll-margin-top: 0;      /* footer mulai tepat di bawah navbar */
+}
+
+.footer-top {
+    margin-bottom: 1.25rem;
+}
+
+.footer-card {
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .1);
+    border-radius: 1rem;
+    padding: 1.1rem;
+    height: 100%;
+    text-align: center;
+    transition: border-color .2s ease, transform .2s ease;
+}
+.footer-card:hover {
+    border-color: var(--orange);
+    transform: translateY(-4px);
+}
+.footer-card i {
+    font-size: 1.4rem;
+    color: var(--orange);
+}
+.footer-card h6 {
+    font-weight: 700;
+    margin: .5rem 0 .35rem;
+}
+.footer-card p {
+    color: rgba(255, 255, 255, .6);
+    font-size: .9rem;
+    margin: 0;
+}
+.footer-card a {
+    color: rgba(255, 255, 255, .6);
+    text-decoration: none;
+}
+.footer-card a:hover { color: var(--orange); }
+
+.footer-link {
+    color: rgba(255, 255, 255, .6);
+    text-decoration: none;
+}
+.footer-link:hover { color: var(--orange); }
+
+/* Layar pendek (laptop kecil): rapatkan lagi */
+@media (max-height: 700px) {
+    .footer-top { margin-bottom: 1rem; }
+    .footer-card { padding: .8rem; }
+}
+
+/* HP: tinggi mengikuti isi, tidak dipaksa satu layar */
+@media (max-width: 991.98px) {
+    .footer-pro {
+        min-height: auto;
+        padding-top: 3rem;
+    }
+}
+
+.btn-sosial { width: 40px; height: 40px; }
+.btn-sosial:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, .5);
+    text-decoration: none;
+}
+.footer-link:hover { color: var(--orange); }
